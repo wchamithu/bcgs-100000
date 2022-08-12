@@ -1,23 +1,15 @@
-import logo from './logo.svg';
-import './App.css';
+import Text from "./components/Text";
 
-function App() {
+const App = () => {
+  
+  let rows = [];
+  for (let i = 0; i < 100000; i++) {
+    rows.push(<Text link={'https://www.bartoncourt.org'}>Barton Court Grammar School</Text>)    
+  } 
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      {rows}
     </div>
   );
 }
